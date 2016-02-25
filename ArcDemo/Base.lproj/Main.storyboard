@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ArcDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="77I-gQ-kFd">
+                                <rect key="frame" x="20" y="28" width="560" height="564"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mom-PE-PGp" customClass="ArcView" customModule="Arc">
+                                        <rect key="frame" x="20" y="22" width="520" height="520"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Mom-PE-PGp" secondAttribute="height" multiplier="1:1" id="5aK-jq-clL"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teS-yx-y7s">
+                                        <rect key="frame" x="257" y="267" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="updateArc" destination="BYZ-38-t0r" eventType="touchUpInside" id="fci-eX-Mes"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="teS-yx-y7s" firstAttribute="centerX" secondItem="77I-gQ-kFd" secondAttribute="centerX" id="9aQ-5M-jx0"/>
+                                    <constraint firstItem="Mom-PE-PGp" firstAttribute="top" secondItem="77I-gQ-kFd" secondAttribute="top" priority="900" constant="20" symbolic="YES" id="Ai4-He-5id"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mom-PE-PGp" secondAttribute="trailing" priority="900" constant="20" symbolic="YES" id="UZ7-6K-qgi"/>
+                                    <constraint firstItem="Mom-PE-PGp" firstAttribute="centerY" secondItem="77I-gQ-kFd" secondAttribute="centerY" id="lPt-eq-Gdr"/>
+                                    <constraint firstItem="Mom-PE-PGp" firstAttribute="centerX" secondItem="77I-gQ-kFd" secondAttribute="centerX" id="lc1-g4-EX6"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Mom-PE-PGp" secondAttribute="trailing" constant="20" symbolic="YES" id="mqD-Uf-RMa"/>
+                                    <constraint firstItem="teS-yx-y7s" firstAttribute="centerY" secondItem="77I-gQ-kFd" secondAttribute="centerY" id="rqr-cE-b9h"/>
+                                    <constraint firstItem="Mom-PE-PGp" firstAttribute="top" relation="greaterThanOrEqual" secondItem="77I-gQ-kFd" secondAttribute="top" constant="20" symbolic="YES" id="xlB-UR-v6A"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="77I-gQ-kFd" secondAttribute="bottom" constant="8" symbolic="YES" id="1z2-o2-wVI"/>
+                            <constraint firstItem="77I-gQ-kFd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="N5c-3o-m0R"/>
+                            <constraint firstItem="77I-gQ-kFd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Sax-hy-Qht"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="77I-gQ-kFd" secondAttribute="trailing" id="Vvu-AF-weD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="arcView" destination="Mom-PE-PGp" id="1gv-Kw-ezZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600" y="550"/>
+        </scene>
+    </scenes>
+</document>
