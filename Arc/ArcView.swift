@@ -8,6 +8,7 @@
 
 import UIKit
 import Geometry
+import Graphics
 
 @IBDesignable
 public class ArcView: UIView
@@ -22,8 +23,8 @@ public class ArcView: UIView
     @IBInspectable
     public var startDegrees: CGFloat
         {
-        set { startAngle = degrees2radians(newValue) }
-        get { return radians2degrees(startAngle) }
+        set { startAngle = newValue.asRadians }
+        get { return startAngle.asDegrees }
     }
     
     public var startAngle: CGFloat
@@ -35,8 +36,8 @@ public class ArcView: UIView
     @IBInspectable
     public var endDegrees: CGFloat
         {
-        set { endAngle = degrees2radians(newValue) }
-        get { return radians2degrees(endAngle) }
+        set { endAngle = newValue.asRadians }
+        get { return endAngle.asDegrees }
     }
 
     public var endAngle: CGFloat

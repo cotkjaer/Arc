@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F02BE151C84730A00BA2646 /* Graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F02BE141C84730A00BA2646 /* Graphics.framework */; };
+		8F02BE161C84730A00BA2646 /* Graphics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F02BE141C84730A00BA2646 /* Graphics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8F02BE171C84732200BA2646 /* Graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F02BE141C84730A00BA2646 /* Graphics.framework */; };
 		8FCE6AF61C7DFD600079A587 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 8FCE6AF51C7DFD600079A587 /* Cartfile */; };
 		8FCE6AF91C7DFEBD0079A587 /* Arithmetic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE6AF81C7DFEBD0079A587 /* Arithmetic.framework */; };
 		8FCE6AFB1C7DFFF80079A587 /* Geometry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE6AFA1C7DFFF80079A587 /* Geometry.framework */; };
@@ -64,6 +67,7 @@
 				8FCE6B271C7F2CF20079A587 /* Arc.framework in Embed Frameworks */,
 				8FCE6B211C7E0BC00079A587 /* Animation.framework in Embed Frameworks */,
 				8FCE6B231C7E0BC00079A587 /* Easing.framework in Embed Frameworks */,
+				8F02BE161C84730A00BA2646 /* Graphics.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8F02BE141C84730A00BA2646 /* Graphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Graphics.framework; path = Carthage/Build/iOS/Graphics.framework; sourceTree = "<group>"; };
 		8FCE6AF51C7DFD600079A587 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		8FCE6AF81C7DFEBD0079A587 /* Arithmetic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Arithmetic.framework; path = Carthage/Build/iOS/Arithmetic.framework; sourceTree = "<group>"; };
 		8FCE6AFA1C7DFFF80079A587 /* Geometry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Geometry.framework; path = Carthage/Build/iOS/Geometry.framework; sourceTree = "<group>"; };
@@ -104,6 +109,7 @@
 				8FCE6B261C7F2CF10079A587 /* Arc.framework in Frameworks */,
 				8FCE6B201C7E0BC00079A587 /* Animation.framework in Frameworks */,
 				8FCE6B221C7E0BC00079A587 /* Easing.framework in Frameworks */,
+				8F02BE151C84730A00BA2646 /* Graphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F02BE171C84732200BA2646 /* Graphics.framework in Frameworks */,
 				8FCE6B1E1C7E0BAD0079A587 /* Animation.framework in Frameworks */,
 				8FCE6B1F1C7E0BAD0079A587 /* Easing.framework in Frameworks */,
 				8FCE6AF91C7DFEBD0079A587 /* Arithmetic.framework in Frameworks */,
@@ -145,6 +152,7 @@
 		8FD873631C76081E00181FA6 = {
 			isa = PBXGroup;
 			children = (
+				8F02BE141C84730A00BA2646 /* Graphics.framework */,
 				8FCE6B1C1C7E0BAD0079A587 /* Animation.framework */,
 				8FCE6B1D1C7E0BAD0079A587 /* Easing.framework */,
 				8FCE6AFA1C7DFFF80079A587 /* Geometry.framework */,
@@ -583,6 +591,7 @@
 				8FCE6B161C7E09130079A587 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8FD873671C76081E00181FA6 /* Build configuration list for PBXProject "Arc" */ = {
 			isa = XCConfigurationList;
