@@ -12,14 +12,11 @@
 		8F02BE171C84732200BA2646 /* Graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F02BE141C84730A00BA2646 /* Graphics.framework */; };
 		8FCE6AF61C7DFD600079A587 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 8FCE6AF51C7DFD600079A587 /* Cartfile */; };
 		8FCE6AF91C7DFEBD0079A587 /* Arithmetic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE6AF81C7DFEBD0079A587 /* Arithmetic.framework */; };
-		8FCE6AFB1C7DFFF80079A587 /* Geometry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE6AFA1C7DFFF80079A587 /* Geometry.framework */; };
 		8FCE6B081C7E09130079A587 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE6B071C7E09130079A587 /* AppDelegate.swift */; };
 		8FCE6B0A1C7E09130079A587 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE6B091C7E09130079A587 /* ViewController.swift */; };
 		8FCE6B0D1C7E09130079A587 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FCE6B0B1C7E09130079A587 /* Main.storyboard */; };
 		8FCE6B0F1C7E09130079A587 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FCE6B0E1C7E09130079A587 /* Assets.xcassets */; };
 		8FCE6B121C7E09130079A587 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FCE6B101C7E09130079A587 /* LaunchScreen.storyboard */; };
-		8FCE6B171C7E0B510079A587 /* Geometry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE6AFA1C7DFFF80079A587 /* Geometry.framework */; };
-		8FCE6B181C7E0B510079A587 /* Geometry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE6AFA1C7DFFF80079A587 /* Geometry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8FCE6B191C7E0B510079A587 /* Arithmetic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE6AF81C7DFEBD0079A587 /* Arithmetic.framework */; };
 		8FCE6B1A1C7E0B510079A587 /* Arithmetic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE6AF81C7DFEBD0079A587 /* Arithmetic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8FCE6B1E1C7E0BAD0079A587 /* Animation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE6B1C1C7E0BAD0079A587 /* Animation.framework */; };
@@ -63,7 +60,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				8FCE6B1A1C7E0B510079A587 /* Arithmetic.framework in Embed Frameworks */,
-				8FCE6B181C7E0B510079A587 /* Geometry.framework in Embed Frameworks */,
 				8FCE6B271C7F2CF20079A587 /* Arc.framework in Embed Frameworks */,
 				8FCE6B211C7E0BC00079A587 /* Animation.framework in Embed Frameworks */,
 				8FCE6B231C7E0BC00079A587 /* Easing.framework in Embed Frameworks */,
@@ -78,7 +74,6 @@
 		8F02BE141C84730A00BA2646 /* Graphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Graphics.framework; path = Carthage/Build/iOS/Graphics.framework; sourceTree = "<group>"; };
 		8FCE6AF51C7DFD600079A587 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		8FCE6AF81C7DFEBD0079A587 /* Arithmetic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Arithmetic.framework; path = Carthage/Build/iOS/Arithmetic.framework; sourceTree = "<group>"; };
-		8FCE6AFA1C7DFFF80079A587 /* Geometry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Geometry.framework; path = Carthage/Build/iOS/Geometry.framework; sourceTree = "<group>"; };
 		8FCE6B051C7E09130079A587 /* ArcDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArcDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FCE6B071C7E09130079A587 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FCE6B091C7E09130079A587 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +100,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FCE6B191C7E0B510079A587 /* Arithmetic.framework in Frameworks */,
-				8FCE6B171C7E0B510079A587 /* Geometry.framework in Frameworks */,
 				8FCE6B261C7F2CF10079A587 /* Arc.framework in Frameworks */,
 				8FCE6B201C7E0BC00079A587 /* Animation.framework in Frameworks */,
 				8FCE6B221C7E0BC00079A587 /* Easing.framework in Frameworks */,
@@ -121,7 +115,6 @@
 				8FCE6B1E1C7E0BAD0079A587 /* Animation.framework in Frameworks */,
 				8FCE6B1F1C7E0BAD0079A587 /* Easing.framework in Frameworks */,
 				8FCE6AF91C7DFEBD0079A587 /* Arithmetic.framework in Frameworks */,
-				8FCE6AFB1C7DFFF80079A587 /* Geometry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +148,6 @@
 				8F02BE141C84730A00BA2646 /* Graphics.framework */,
 				8FCE6B1C1C7E0BAD0079A587 /* Animation.framework */,
 				8FCE6B1D1C7E0BAD0079A587 /* Easing.framework */,
-				8FCE6AFA1C7DFFF80079A587 /* Geometry.framework */,
 				8FCE6AF81C7DFEBD0079A587 /* Arithmetic.framework */,
 				8FCE6AF51C7DFD600079A587 /* Cartfile */,
 				8FD8736F1C76081E00181FA6 /* Arc */,

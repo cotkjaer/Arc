@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Geometry
 import Graphics
+import Arithmetic
 import Animation
 
 private let π = CGFloat.π
@@ -120,7 +120,8 @@ public class ArcLayer: CAShapeLayer
     
     private func strokeToAngle(stroke: CGFloat) -> CGFloat
     {
-        return normalizeAngle(stroke * π4, π)
+        return (stroke * π4).normalized(π)
+//        return normalizeAngle(stroke * π4, π)
     }
     
     private func findAngles() -> (CGFloat, CGFloat)
@@ -247,7 +248,7 @@ class AArcLayer: CAShapeLayer
     {
         let diameter = floor(min(frame.width, frame.height) - arcWidth)
         
-        let circle = UIBezierPath(ovalInRect: CGRect(center: bounds.center, size: CGSize(widthAndHeight: diameter)))
+        let circle = UIBezierPath(ovalInRect: CGRect(center: bounds.center, size: CGSize(diameter)))
         
         path = circle.CGPath
     }

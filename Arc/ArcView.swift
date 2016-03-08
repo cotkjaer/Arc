@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Geometry
 import Graphics
 
 @IBDesignable
