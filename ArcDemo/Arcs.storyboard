@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="omg-2f-MgO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Arcs View Controller-->
+        <scene sceneID="ejh-ha-N5j">
+            <objects>
+                <viewController id="omg-2f-MgO" customClass="ArcsViewController" customModule="ArcDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="swi-U4-qeF"/>
+                        <viewControllerLayoutGuide type="bottom" id="lke-TR-TbO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ti6-7B-GjN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Krd-SU-K2u">
+                                <rect key="frame" x="140" y="319" width="94" height="29"/>
+                                <connections>
+                                    <action selector="step:" destination="omg-2f-MgO" eventType="valueChanged" id="i9U-c5-l5H"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Krd-SU-K2u" firstAttribute="centerX" secondItem="ti6-7B-GjN" secondAttribute="centerX" id="4VA-gQ-EJ2"/>
+                            <constraint firstItem="Krd-SU-K2u" firstAttribute="centerY" secondItem="ti6-7B-GjN" secondAttribute="centerY" id="ESv-gY-AuQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="stepper" destination="Krd-SU-K2u" id="RUL-4N-hJk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nL4-nZ-eP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="194" y="41"/>
+        </scene>
+    </scenes>
+</document>

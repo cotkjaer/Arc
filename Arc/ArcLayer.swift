@@ -18,9 +18,9 @@ private let π6 = π2 + π4
 private let oneThird : CGFloat = 1.0/3.0
 private let twoThird : CGFloat = 2.0/3.0
 
-public class ArcLayer: CAShapeLayer
+open class ArcLayer: CAShapeLayer
 {
-    private func normalizeAngleTo6π(angle: CGFloat) -> CGFloat
+    fileprivate func normalizeAngleTo6π(_ angle: CGFloat) -> CGFloat
     {
         var angle = angle
         
@@ -37,12 +37,12 @@ public class ArcLayer: CAShapeLayer
         return angle
     }
     
-    private func strokeForAngle(angle: CGFloat) -> CGFloat
+    fileprivate func strokeForAngle(_ angle: CGFloat) -> CGFloat
     {
         return normalizeAngleTo6π(angle) / π6
     }
     
-    public var arcStartAngle : CGFloat = 0
+    open var arcStartAngle : CGFloat = 0
         {
         willSet
         {
@@ -50,7 +50,7 @@ public class ArcLayer: CAShapeLayer
         }
     }
     
-    public var arcEndAngle : CGFloat = π
+    open var arcEndAngle : CGFloat = π
         {
         willSet
         {
@@ -58,7 +58,7 @@ public class ArcLayer: CAShapeLayer
         }
     }
     
-    public var arcWidth : CGFloat
+    open var arcWidth : CGFloat
         {
         set
         {
@@ -72,22 +72,22 @@ public class ArcLayer: CAShapeLayer
         get { return lineWidth }
     }
     
-    override public var lineWidth : CGFloat { didSet { updatePath() } }
+    override open var lineWidth : CGFloat { didSet { updatePath() } }
     
-    public var arcClockwise : Bool = true
+    open var arcClockwise : Bool = true
         {
         didSet { adjustStartAndEndStroke() }
     }
     
-    public var arcColor : CGColor
+    open var arcColor : CGColor
         {
         set { strokeColor = newValue }
-        get { return strokeColor ?? UIColor.clearColor().CGColor }
+        get { return strokeColor ?? UIColor.clear.cgColor }
     }
 
     // MARK: - Bounds
     
-    override public var bounds : CGRect { didSet { updatePath() } }
+    override open var bounds : CGRect { didSet { updatePath() } }
     
     // MARK: - Init
     
@@ -97,7 +97,7 @@ public class ArcLayer: CAShapeLayer
         setup()
     }
     
-    override public init(layer: AnyObject)
+    override public init(layer: Any)
     {
         super.init(layer: layer)
     }
@@ -110,7 +110,7 @@ public class ArcLayer: CAShapeLayer
     
     func setup()
     {
-        fillColor = UIColor.clearColor().CGColor
+        fillColor = UIColor.clear.cgColor
         updatePath()
     }
     
@@ -118,13 +118,12 @@ public class ArcLayer: CAShapeLayer
     
     // MARK: start- and end-stroke
     
-    private func strokeToAngle(stroke: CGFloat) -> CGFloat
+    fileprivate func strokeToAngle(_ stroke: CGFloat) -> CGFloat
     {
-        return (stroke * π4).normalized(π)
-//        return normalizeAngle(stroke * π4, π)
+        return (stroke * π4).normalized(φ: π)
     }
     
-    private func findAngles() -> (CGFloat, CGFloat)
+    fileprivate func findAngles() -> (CGFloat, CGFloat)
     {
         var realStartAngle = arcStartAngle
         var realEndAngle = arcEndAngle
@@ -145,7 +144,7 @@ public class ArcLayer: CAShapeLayer
         return (realStrokeStart, realStrokeEnd)
     }
     
-    private func adjustStartAndEndStroke(duration: Double = 0.1,
+    fileprivate func adjustStartAndEndStroke(_ duration: Double = 0.1,
         deltaStartAngle: CGFloat? = nil,
         deltaEndAngle: CGFloat? = nil
         )
@@ -161,28 +160,28 @@ public class ArcLayer: CAShapeLayer
         
         if let delta = deltaStartAngle
         {
-            animate(realStrokeStart + delta / π6, duration: duration, keyPath: "strokeStart")
+            animate(NSNumber(value: Float(realStrokeStart + delta / π6)), duration: duration, keyPath: "strokeStart")
         }
         
         if let delta = deltaEndAngle
         {
-            animate(realStrokeEnd + delta / π6, duration: duration, keyPath: "strokeEnd")
+            animate(NSNumber(value: Float(realStrokeEnd + delta / π6)), duration: duration, keyPath: "strokeEnd")
         }
     }
     
     // MARK: Path
     
-    private func updatePath(duration: Double = 0.1)
+    fileprivate func updatePath(_ duration: Double = 0.1)
     {
         let radius = floor((min(bounds.width, bounds.height) - arcWidth) / 2)
         
         let threeLoops = UIBezierPath(arcCenter: bounds.center, radius: radius, startAngle: 0, endAngle: π2, clockwise: true)
 
-        threeLoops.addArcWithCenter(bounds.center, radius: radius, startAngle: 0, endAngle: π2, clockwise: true)
+        threeLoops.addArc(withCenter: bounds.center, radius: radius, startAngle: 0, endAngle: π2, clockwise: true)
 
-        threeLoops.addArcWithCenter(bounds.center, radius: radius, startAngle: 0, endAngle: π2, clockwise: true)
+        threeLoops.addArc(withCenter: bounds.center, radius: radius, startAngle: 0, endAngle: π2, clockwise: true)
         
-        animate(threeLoops.CGPath, duration: duration, keyPath: "path")
+        animate(threeLoops.cgPath, duration: duration, keyPath: "path")
     }
 }
 
@@ -213,7 +212,7 @@ class AArcLayer: CAShapeLayer
     var arcColor : CGColor
         {
         set { strokeColor = newValue }
-        get { return strokeColor ?? UIColor.clearColor().CGColor }
+        get { return strokeColor ?? UIColor.clear.cgColor }
     }
     
     override var bounds : CGRect { didSet { updatePath() } }
@@ -227,7 +226,7 @@ class AArcLayer: CAShapeLayer
         setup()
     }
     
-    override init(layer: AnyObject)
+    override init(layer: Any)
     {
         super.init(layer: layer)
     }
@@ -240,7 +239,7 @@ class AArcLayer: CAShapeLayer
     
     func setup()
     {
-        fillColor = UIColor.clearColor().CGColor
+        fillColor = UIColor.clear.cgColor
         updatePath()
     }
     
@@ -248,9 +247,9 @@ class AArcLayer: CAShapeLayer
     {
         let diameter = floor(min(frame.width, frame.height) - arcWidth)
         
-        let circle = UIBezierPath(ovalInRect: CGRect(center: bounds.center, size: CGSize(diameter)))
+        let circle = UIBezierPath(ovalIn: CGRect(origin: bounds.center, size: CGSize(diameter)))
         
-        path = circle.CGPath
+        path = circle.cgPath
     }
 }
 
@@ -259,76 +258,238 @@ let ArcWidthKey = "arcWidth"
 let ArcStartAngleKey = "arcStartAngle"
 let ArcEndAngleKey = "arcEndAngle"
 let ArcClockwiseKey = "arcClockwise"
-let ArcColorKey = "arcColor"
+let ArcFillColorKey = "arcFillColor"
+let ArcStrokeColorKey = "arcStrokeColor"
+let ArcStrokeWidthKey = "arcStrokeWidth"
 
-internal class DrawnArcLayer: CALayer
+private func isCustomKey(_ key: String) -> Bool
+{
+    switch key
+    {
+    case ArcWidthKey, ArcStartAngleKey, ArcEndAngleKey, ArcClockwiseKey, ArcFillColorKey, ArcStrokeColorKey, ArcStrokeWidthKey:
+        return true
+        
+    default:
+        return false
+    }
+}
+
+open class DrawnArcLayer: CALayer
 {
     //NB No good for animations if the view is large, but may be extended with start and end cap
     
     @NSManaged
-    var arcStartAngle : CGFloat
+    open var arcStartAngle : CGFloat
     
     @NSManaged
-    var arcEndAngle : CGFloat
+    open var arcEndAngle : CGFloat
     
     @NSManaged
-    var arcWidth : CGFloat
+    open var arcWidth : CGFloat
     
     @NSManaged
-    var arcClockwise : Bool
+    open var arcClockwise : Bool
     
     @NSManaged
-    var arcColor : CGColor
+    open var arcFillColor : CGColor?
     
-    override class func needsDisplayForKey(key: String) -> Bool
+    @NSManaged
+    open var arcStrokeColor : CGColor?
+    
+    @NSManaged
+    open var arcStrokeWidth : CGFloat
+    
+    override init()
     {
-        switch key
-        {
-        case ArcWidthKey, ArcStartAngleKey, ArcEndAngleKey, ArcClockwiseKey, ArcColorKey:
-            return true
-            
-        default:
-            return super.needsDisplayForKey(key)
-        }
+        super.init()
+        setupRasterize()
     }
     
-    override func actionForKey(key: String) -> CAAction?
+    override init(layer: Any)
     {
-        switch key
-        {
-        case ArcWidthKey, ArcStartAngleKey, ArcEndAngleKey, ArcClockwiseKey, ArcColorKey:
-            let animation = CABasicAnimation(keyPath: key)
-            animation.fromValue = presentationLayer()?.valueForKey(key)
-            animation.duration = 1
-            return animation
-            
-        default:
-            return super.actionForKey(key)
-        }
+        super.init(layer: layer)
+        setupRasterize()
+        
+        guard let arcLayer = layer as? DrawnArcLayer else { return }
+        
+        arcStartAngle = arcLayer.arcStartAngle
+        arcEndAngle = arcLayer.arcEndAngle
+        arcFillColor = arcLayer.arcFillColor
+        arcWidth = arcLayer.arcWidth
+        arcClockwise = arcLayer.arcClockwise
+        arcStrokeColor = arcLayer.arcStrokeColor
+        arcStrokeWidth = arcLayer.arcStrokeWidth
     }
     
-    override func drawInContext(ctx: CGContext)
+    required public init?(coder aDecoder: NSCoder)
     {
-        //            super.drawInContext(ctx)
+        super.init(coder: aDecoder)
+        setupRasterize()
+//        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupRasterize()
+    {
+        shouldRasterize = true
+        contentsScale = UIScreen.main.scale
+        rasterizationScale = UIScreen.main.scale
+    }
+    
+    override open class func needsDisplay(forKey key: String) -> Bool
+    {
+        return isCustomKey(key) || super.needsDisplay(forKey: key)
+    }
+    
+    override open func action(forKey key: String) -> CAAction?
+    {
+        guard isCustomKey(key) else { return super.action(forKey: key) }
+        
+        // Get a fully configured animation if we are animating in a UIView.animate
+        guard let animation = super.action(forKey: "backgroundColor") as? CABasicAnimation else { setNeedsDisplay(); return nil }
+        
+        animation.fromValue = presentation()?.value(forKey: key)
+        animation.keyPath = key
+        animation.toValue = nil
+        
+        return animation
+    }
+    
+    override open func draw(in ctx: CGContext)
+    {
+        if !shouldRasterize { setupRasterize() }
         
         UIGraphicsPushContext(ctx)
         
-        let outerRadius = min(bounds.width, bounds.height) / 2
-        let innerRadius = outerRadius - arcWidth
-        
-        //            let startAngle : CGFloat = 0
-        //            let endAngle = π2 * CGFloat(value)
+        let outerRadius = max(0,(min(bounds.width, bounds.height) - arcStrokeWidth)) / 2
+        let innerRadius = max(0, (outerRadius - arcWidth) - arcStrokeWidth/2)
         
         let path = UIBezierPath(arcCenter: bounds.center, radius: innerRadius, startAngle: arcStartAngle, endAngle: arcEndAngle, clockwise: arcClockwise)
-        path.addArcWithCenter(bounds.center, radius: outerRadius, startAngle: arcEndAngle, endAngle: arcStartAngle, clockwise: !arcClockwise)
         
-        path.closePath()
+        path.addArc(withCenter: bounds.center, radius: outerRadius, startAngle: arcEndAngle, endAngle: arcStartAngle, clockwise: !arcClockwise)
         
-        UIColor(CGColor: arcColor).setFill()
+        path.close()
         
-        path.fill()
+        if let fillColor = self.arcFillColor?.uiColor
+        {
+            fillColor.setFill()
+            
+            path.fill()
+        }
+        
+        if let strokeColor = self.arcStrokeColor?.uiColor, arcStrokeWidth > 0
+        {
+            path.lineWidth = arcStrokeWidth
+            strokeColor.setStroke()
+            
+            path.stroke()
+        }
         
         UIGraphicsPopContext()
     }
 }
 
+open class ShapeArcLayer: CAShapeLayer
+{
+    private var startAngle : CGFloat = 0
+    
+    open var arcStartAngle : CGFloat
+    {
+        set { startAngle = newValue; path = createPath()}
+        get { return startAngle }
+    }
+    
+    private var endAngle : CGFloat = 0
+    
+    open var arcEndAngle : CGFloat
+        {
+        set { endAngle = newValue; path = createPath()}
+        get { return endAngle }
+    }
+    
+    private var width : CGFloat = 0
+    
+    open var arcWidth : CGFloat
+        {
+        set { width = newValue; path = createPath()}
+        get { return width }
+    }
+    
+    open var arcClockwise : Bool = true
+        { didSet { path = createPath() } }
+    
+//    @NSManaged
+//    open var arcFillColor : CGColor?
+//    
+//    @NSManaged
+//    open var arcStrokeColor : CGColor?
+    
+    func createPath() -> CGPath
+    {
+        let outerRadius = (min(bounds.width, bounds.height) - lineWidth) / 2
+        let innerRadius = max(0, outerRadius - arcWidth)
+
+        let path = UIBezierPath(arcCenter: bounds.center, radius: innerRadius, startAngle: startAngle, endAngle: endAngle, clockwise: arcClockwise)
+        
+        path.addArc(withCenter: bounds.center, radius: outerRadius, startAngle: endAngle, endAngle: startAngle, clockwise: !arcClockwise)
+        
+        path.close()
+
+        return path.cgPath
+    }
+    
+    override init()
+    {
+        super.init()
+    }
+    
+    override init(layer: Any)
+    {
+        super.init(layer: layer)
+        
+        guard let aLayer = layer as? DrawnArcLayer else { return }
+        
+        arcStartAngle = aLayer.arcStartAngle
+        arcEndAngle = aLayer.arcEndAngle
+//        arcFillColor = aLayer.arcFillColor
+//        arcStrokeColor = aLayer.arcStrokeColor
+        arcWidth = aLayer.arcWidth
+        arcClockwise = aLayer.arcClockwise
+    }
+    
+    required public init?(coder aDecoder: NSCoder)
+    {
+        super.init(coder: aDecoder)
+        //        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private class func isCustomKey(_ key: String) -> Bool
+    {
+        switch key
+        {
+        case ArcWidthKey, ArcStartAngleKey, ArcEndAngleKey, ArcClockwiseKey, ArcFillColorKey, ArcStrokeColorKey:
+            return true
+            
+        default:
+            return false
+        }
+    }
+    
+    override open class func needsDisplay(forKey key: String) -> Bool
+    {
+        return isCustomKey(key) || super.needsDisplay(forKey: key)
+    }
+    
+    override open func action(forKey key: String) -> CAAction?
+    {
+        guard isCustomKey(key) else { return super.action(forKey: key) }
+        
+        // Get a fully configured animation if we are animating in a UIView.animate
+        guard let animation = super.action(forKey: "backgroundColor") as? CABasicAnimation else { setNeedsDisplay(); return nil }
+        
+        animation.fromValue = presentation()?.value(forKey: key)
+        animation.keyPath = key
+        animation.toValue = nil
+        
+        return animation
+    }
+}

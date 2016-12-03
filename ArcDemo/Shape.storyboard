@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AlV-OG-g3j">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Drawn View Controller-->
+        <scene sceneID="OnU-4u-NTy">
+            <objects>
+                <viewController id="AlV-OG-g3j" customClass="DrawnViewController" customModule="ArcDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4wk-yE-oJC"/>
+                        <viewControllerLayoutGuide type="bottom" id="pXl-rF-ZAu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mPS-QO-G3t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Pb7-oo-Gw9" customClass="ShapeArcView" customModule="Arc">
+                                <rect key="frame" x="16" y="162" width="343" height="343"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Pb7-oo-Gw9" secondAttribute="height" multiplier="1:1" id="jA4-r5-Vsa"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endAngle">
+                                        <real key="value" value="1.2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="width">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.078431372550000003" green="0.58823529409999997" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQf-Cd-PSq">
+                                <rect key="frame" x="161" y="318" width="53" height="30"/>
+                                <state key="normal" title="Change"/>
+                                <connections>
+                                    <action selector="handleButton" destination="AlV-OG-g3j" eventType="touchUpInside" id="Pn7-zZ-F6d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Pb7-oo-Gw9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="4wk-yE-oJC" secondAttribute="bottom" constant="8" symbolic="YES" id="0i6-xB-IWa"/>
+                            <constraint firstItem="CQf-Cd-PSq" firstAttribute="centerY" secondItem="mPS-QO-G3t" secondAttribute="centerY" id="3c0-hz-7Bo"/>
+                            <constraint firstItem="Pb7-oo-Gw9" firstAttribute="top" secondItem="4wk-yE-oJC" secondAttribute="bottom" priority="900" constant="8" symbolic="YES" id="4SV-oo-CGI"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Pb7-oo-Gw9" secondAttribute="trailing" id="5d9-Fs-CRJ"/>
+                            <constraint firstItem="Pb7-oo-Gw9" firstAttribute="centerY" secondItem="mPS-QO-G3t" secondAttribute="centerY" id="8ty-p3-kQC"/>
+                            <constraint firstItem="Pb7-oo-Gw9" firstAttribute="centerX" secondItem="mPS-QO-G3t" secondAttribute="centerX" id="IlG-nA-0ge"/>
+                            <constraint firstItem="CQf-Cd-PSq" firstAttribute="centerX" secondItem="mPS-QO-G3t" secondAttribute="centerX" id="RBJ-NP-59z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Pb7-oo-Gw9" secondAttribute="trailing" priority="900" id="myQ-FX-fV5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="arcView" destination="Pb7-oo-Gw9" id="DSa-tZ-5a1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ynF-iP-65g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-116" y="152"/>
+        </scene>
+    </scenes>
+</document>

@@ -10,6 +10,8 @@
 		8F02BE151C84730A00BA2646 /* Graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F02BE141C84730A00BA2646 /* Graphics.framework */; };
 		8F02BE161C84730A00BA2646 /* Graphics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F02BE141C84730A00BA2646 /* Graphics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8F02BE171C84732200BA2646 /* Graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F02BE141C84730A00BA2646 /* Graphics.framework */; };
+		8F2316071DE44DA6004DAE9B /* Drawn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2316061DE44DA6004DAE9B /* Drawn.storyboard */; };
+		8F2316091DE44DCE004DAE9B /* DrawnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2316081DE44DCE004DAE9B /* DrawnViewController.swift */; };
 		8FCE6AF61C7DFD600079A587 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 8FCE6AF51C7DFD600079A587 /* Cartfile */; };
 		8FCE6AF91C7DFEBD0079A587 /* Arithmetic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE6AF81C7DFEBD0079A587 /* Arithmetic.framework */; };
 		8FCE6B081C7E09130079A587 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE6B071C7E09130079A587 /* AppDelegate.swift */; };
@@ -33,6 +35,10 @@
 		8FD8737D1C76081E00181FA6 /* ArcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD8737C1C76081E00181FA6 /* ArcTests.swift */; };
 		8FD873881C76083900181FA6 /* ArcLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD873871C76083900181FA6 /* ArcLayer.swift */; };
 		8FD8738A1C76086100181FA6 /* ArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD873891C76086100181FA6 /* ArcView.swift */; };
+		8FF0FB4D1DE45CE5009CA2A5 /* Shape.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF0FB4C1DE45CE5009CA2A5 /* Shape.storyboard */; };
+		8FF0FB4F1DE48281009CA2A5 /* Arcs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF0FB4E1DE48281009CA2A5 /* Arcs.storyboard */; };
+		8FF0FB511DE483DB009CA2A5 /* ArcsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0FB501DE483DB009CA2A5 /* ArcsView.swift */; };
+		8FF0FB531DE48BCF009CA2A5 /* ArcsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0FB521DE48BCF009CA2A5 /* ArcsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +78,8 @@
 
 /* Begin PBXFileReference section */
 		8F02BE141C84730A00BA2646 /* Graphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Graphics.framework; path = Carthage/Build/iOS/Graphics.framework; sourceTree = "<group>"; };
+		8F2316061DE44DA6004DAE9B /* Drawn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Drawn.storyboard; sourceTree = "<group>"; };
+		8F2316081DE44DCE004DAE9B /* DrawnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawnViewController.swift; sourceTree = "<group>"; };
 		8FCE6AF51C7DFD600079A587 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		8FCE6AF81C7DFEBD0079A587 /* Arithmetic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Arithmetic.framework; path = Carthage/Build/iOS/Arithmetic.framework; sourceTree = "<group>"; };
 		8FCE6B051C7E09130079A587 /* ArcDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArcDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +100,10 @@
 		8FD8737E1C76081E00181FA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FD873871C76083900181FA6 /* ArcLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcLayer.swift; sourceTree = "<group>"; };
 		8FD873891C76086100181FA6 /* ArcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcView.swift; sourceTree = "<group>"; };
+		8FF0FB4C1DE45CE5009CA2A5 /* Shape.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Shape.storyboard; sourceTree = "<group>"; };
+		8FF0FB4E1DE48281009CA2A5 /* Arcs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Arcs.storyboard; sourceTree = "<group>"; };
+		8FF0FB501DE483DB009CA2A5 /* ArcsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcsView.swift; sourceTree = "<group>"; };
+		8FF0FB521DE48BCF009CA2A5 /* ArcsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,12 +141,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8FA50D051CABBB65005D28B6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8FD873701C76081E00181FA6 /* Arc.h */,
+				8FD873721C76081E00181FA6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		8FCE6B061C7E09130079A587 /* ArcDemo */ = {
 			isa = PBXGroup;
 			children = (
 				8FCE6B071C7E09130079A587 /* AppDelegate.swift */,
 				8FCE6B091C7E09130079A587 /* ViewController.swift */,
 				8FCE6B0B1C7E09130079A587 /* Main.storyboard */,
+				8F2316061DE44DA6004DAE9B /* Drawn.storyboard */,
+				8F2316081DE44DCE004DAE9B /* DrawnViewController.swift */,
+				8FF0FB4C1DE45CE5009CA2A5 /* Shape.storyboard */,
+				8FF0FB4E1DE48281009CA2A5 /* Arcs.storyboard */,
+				8FF0FB521DE48BCF009CA2A5 /* ArcsViewController.swift */,
 				8FCE6B0E1C7E09130079A587 /* Assets.xcassets */,
 				8FCE6B101C7E09130079A587 /* LaunchScreen.storyboard */,
 				8FCE6B131C7E09130079A587 /* Info.plist */,
@@ -170,10 +196,10 @@
 		8FD8736F1C76081E00181FA6 /* Arc */ = {
 			isa = PBXGroup;
 			children = (
-				8FD873891C76086100181FA6 /* ArcView.swift */,
 				8FD873871C76083900181FA6 /* ArcLayer.swift */,
-				8FD873701C76081E00181FA6 /* Arc.h */,
-				8FD873721C76081E00181FA6 /* Info.plist */,
+				8FD873891C76086100181FA6 /* ArcView.swift */,
+				8FF0FB501DE483DB009CA2A5 /* ArcsView.swift */,
+				8FA50D051CABBB65005D28B6 /* Supporting Files */,
 				8FCE6B2A1C7F358B0079A587 /* Arc.swift */,
 			);
 			path = Arc;
@@ -264,14 +290,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Christian Otkjær";
 				TargetAttributes = {
 					8FCE6B041C7E09130079A587 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 9HQR3Y4WE5;
+						LastSwiftMigration = 0810;
 					};
 					8FD8736C1C76081E00181FA6 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0810;
 					};
 					8FD873761C76081E00181FA6 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -306,6 +335,9 @@
 				8FCE6B121C7E09130079A587 /* LaunchScreen.storyboard in Resources */,
 				8FCE6B0F1C7E09130079A587 /* Assets.xcassets in Resources */,
 				8FCE6B0D1C7E09130079A587 /* Main.storyboard in Resources */,
+				8FF0FB4D1DE45CE5009CA2A5 /* Shape.storyboard in Resources */,
+				8F2316071DE44DA6004DAE9B /* Drawn.storyboard in Resources */,
+				8FF0FB4F1DE48281009CA2A5 /* Arcs.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +364,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FCE6B0A1C7E09130079A587 /* ViewController.swift in Sources */,
+				8F2316091DE44DCE004DAE9B /* DrawnViewController.swift in Sources */,
 				8FCE6B081C7E09130079A587 /* AppDelegate.swift in Sources */,
+				8FF0FB531DE48BCF009CA2A5 /* ArcsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FD873881C76083900181FA6 /* ArcLayer.swift in Sources */,
+				8FF0FB511DE483DB009CA2A5 /* ArcsView.swift in Sources */,
 				8FD8738A1C76086100181FA6 /* ArcView.swift in Sources */,
 				8FCE6B2B1C7F358B0079A587 /* Arc.swift in Sources */,
 			);
@@ -392,8 +427,9 @@
 		8FCE6B151C7E09130079A587 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = 9HQR3Y4WE5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -402,14 +438,16 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.silverback-it.ArcDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		8FCE6B161C7E09130079A587 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = 9HQR3Y4WE5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -418,6 +456,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.silverback-it.ArcDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -434,8 +473,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -482,8 +523,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -503,6 +546,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -514,6 +558,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -529,6 +574,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -536,6 +582,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -550,6 +597,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.silverback-it.Arc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
