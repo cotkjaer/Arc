@@ -12,6 +12,16 @@
 		8F02BE171C84732200BA2646 /* Graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F02BE141C84730A00BA2646 /* Graphics.framework */; };
 		8F2316071DE44DA6004DAE9B /* Drawn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2316061DE44DA6004DAE9B /* Drawn.storyboard */; };
 		8F2316091DE44DCE004DAE9B /* DrawnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2316081DE44DCE004DAE9B /* DrawnViewController.swift */; };
+		8F9D818D1E27746F00BB8BAF /* ArcCap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D818C1E27746F00BB8BAF /* ArcCap.swift */; };
+		8F9D81911E278CB200BB8BAF /* SolidArcLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D81901E278CB200BB8BAF /* SolidArcLayer.swift */; };
+		8F9D81951E2790F900BB8BAF /* Span.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F9D81941E2790F900BB8BAF /* Span.storyboard */; };
+		8F9D81971E27911400BB8BAF /* SpanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D81961E27911400BB8BAF /* SpanViewController.swift */; };
+		8F9D81991E27914300BB8BAF /* SolidArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D81981E27914300BB8BAF /* SolidArcView.swift */; };
+		8F9D819B1E2793E200BB8BAF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D819A1E2793E200BB8BAF /* Constants.swift */; };
+		8F9D819D1E27AAB600BB8BAF /* DrawnArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D819C1E27AAB600BB8BAF /* DrawnArcView.swift */; };
+		8F9D819F1E27AADB00BB8BAF /* ShapeArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D819E1E27AADB00BB8BAF /* ShapeArcView.swift */; };
+		8F9D81A11E27ACF500BB8BAF /* Walk.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F9D81A01E27ACF500BB8BAF /* Walk.storyboard */; };
+		8F9D81A31E27B10E00BB8BAF /* ShapeArcLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D81A21E27B10E00BB8BAF /* ShapeArcLayer.swift */; };
 		8FCE6AF61C7DFD600079A587 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 8FCE6AF51C7DFD600079A587 /* Cartfile */; };
 		8FCE6AF91C7DFEBD0079A587 /* Arithmetic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE6AF81C7DFEBD0079A587 /* Arithmetic.framework */; };
 		8FCE6B081C7E09130079A587 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE6B071C7E09130079A587 /* AppDelegate.swift */; };
@@ -33,11 +43,9 @@
 		8FD873711C76081E00181FA6 /* Arc.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FD873701C76081E00181FA6 /* Arc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8FD873781C76081E00181FA6 /* Arc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD8736D1C76081E00181FA6 /* Arc.framework */; };
 		8FD8737D1C76081E00181FA6 /* ArcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD8737C1C76081E00181FA6 /* ArcTests.swift */; };
-		8FD873881C76083900181FA6 /* ArcLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD873871C76083900181FA6 /* ArcLayer.swift */; };
-		8FD8738A1C76086100181FA6 /* ArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD873891C76086100181FA6 /* ArcView.swift */; };
+		8FD873881C76083900181FA6 /* DrawnArcLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD873871C76083900181FA6 /* DrawnArcLayer.swift */; };
 		8FF0FB4D1DE45CE5009CA2A5 /* Shape.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF0FB4C1DE45CE5009CA2A5 /* Shape.storyboard */; };
 		8FF0FB4F1DE48281009CA2A5 /* Arcs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF0FB4E1DE48281009CA2A5 /* Arcs.storyboard */; };
-		8FF0FB511DE483DB009CA2A5 /* ArcsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0FB501DE483DB009CA2A5 /* ArcsView.swift */; };
 		8FF0FB531DE48BCF009CA2A5 /* ArcsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0FB521DE48BCF009CA2A5 /* ArcsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +88,16 @@
 		8F02BE141C84730A00BA2646 /* Graphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Graphics.framework; path = Carthage/Build/iOS/Graphics.framework; sourceTree = "<group>"; };
 		8F2316061DE44DA6004DAE9B /* Drawn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Drawn.storyboard; sourceTree = "<group>"; };
 		8F2316081DE44DCE004DAE9B /* DrawnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawnViewController.swift; sourceTree = "<group>"; };
+		8F9D818C1E27746F00BB8BAF /* ArcCap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcCap.swift; sourceTree = "<group>"; };
+		8F9D81901E278CB200BB8BAF /* SolidArcLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SolidArcLayer.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8F9D81941E2790F900BB8BAF /* Span.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Span.storyboard; sourceTree = "<group>"; };
+		8F9D81961E27911400BB8BAF /* SpanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SpanViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8F9D81981E27914300BB8BAF /* SolidArcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SolidArcView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8F9D819A1E2793E200BB8BAF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8F9D819C1E27AAB600BB8BAF /* DrawnArcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawnArcView.swift; sourceTree = "<group>"; };
+		8F9D819E1E27AADB00BB8BAF /* ShapeArcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeArcView.swift; sourceTree = "<group>"; };
+		8F9D81A01E27ACF500BB8BAF /* Walk.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Walk.storyboard; sourceTree = "<group>"; };
+		8F9D81A21E27B10E00BB8BAF /* ShapeArcLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeArcLayer.swift; sourceTree = "<group>"; };
 		8FCE6AF51C7DFD600079A587 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		8FCE6AF81C7DFEBD0079A587 /* Arithmetic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Arithmetic.framework; path = Carthage/Build/iOS/Arithmetic.framework; sourceTree = "<group>"; };
 		8FCE6B051C7E09130079A587 /* ArcDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArcDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,11 +116,9 @@
 		8FD873771C76081E00181FA6 /* ArcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD8737C1C76081E00181FA6 /* ArcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcTests.swift; sourceTree = "<group>"; };
 		8FD8737E1C76081E00181FA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8FD873871C76083900181FA6 /* ArcLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcLayer.swift; sourceTree = "<group>"; };
-		8FD873891C76086100181FA6 /* ArcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcView.swift; sourceTree = "<group>"; };
+		8FD873871C76083900181FA6 /* DrawnArcLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawnArcLayer.swift; sourceTree = "<group>"; };
 		8FF0FB4C1DE45CE5009CA2A5 /* Shape.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Shape.storyboard; sourceTree = "<group>"; };
 		8FF0FB4E1DE48281009CA2A5 /* Arcs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Arcs.storyboard; sourceTree = "<group>"; };
-		8FF0FB501DE483DB009CA2A5 /* ArcsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcsView.swift; sourceTree = "<group>"; };
 		8FF0FB521DE48BCF009CA2A5 /* ArcsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,13 +170,16 @@
 			isa = PBXGroup;
 			children = (
 				8FCE6B071C7E09130079A587 /* AppDelegate.swift */,
-				8FCE6B091C7E09130079A587 /* ViewController.swift */,
 				8FCE6B0B1C7E09130079A587 /* Main.storyboard */,
+				8F9D81A01E27ACF500BB8BAF /* Walk.storyboard */,
+				8FCE6B091C7E09130079A587 /* ViewController.swift */,
 				8F2316061DE44DA6004DAE9B /* Drawn.storyboard */,
 				8F2316081DE44DCE004DAE9B /* DrawnViewController.swift */,
 				8FF0FB4C1DE45CE5009CA2A5 /* Shape.storyboard */,
 				8FF0FB4E1DE48281009CA2A5 /* Arcs.storyboard */,
 				8FF0FB521DE48BCF009CA2A5 /* ArcsViewController.swift */,
+				8F9D81941E2790F900BB8BAF /* Span.storyboard */,
+				8F9D81961E27911400BB8BAF /* SpanViewController.swift */,
 				8FCE6B0E1C7E09130079A587 /* Assets.xcassets */,
 				8FCE6B101C7E09130079A587 /* LaunchScreen.storyboard */,
 				8FCE6B131C7E09130079A587 /* Info.plist */,
@@ -196,9 +215,14 @@
 		8FD8736F1C76081E00181FA6 /* Arc */ = {
 			isa = PBXGroup;
 			children = (
-				8FD873871C76083900181FA6 /* ArcLayer.swift */,
-				8FD873891C76086100181FA6 /* ArcView.swift */,
-				8FF0FB501DE483DB009CA2A5 /* ArcsView.swift */,
+				8F9D819A1E2793E200BB8BAF /* Constants.swift */,
+				8F9D81901E278CB200BB8BAF /* SolidArcLayer.swift */,
+				8F9D81981E27914300BB8BAF /* SolidArcView.swift */,
+				8F9D818C1E27746F00BB8BAF /* ArcCap.swift */,
+				8F9D81A21E27B10E00BB8BAF /* ShapeArcLayer.swift */,
+				8F9D819E1E27AADB00BB8BAF /* ShapeArcView.swift */,
+				8FD873871C76083900181FA6 /* DrawnArcLayer.swift */,
+				8F9D819C1E27AAB600BB8BAF /* DrawnArcView.swift */,
 				8FA50D051CABBB65005D28B6 /* Supporting Files */,
 				8FCE6B2A1C7F358B0079A587 /* Arc.swift */,
 			);
@@ -296,11 +320,11 @@
 					8FCE6B041C7E09130079A587 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 9HQR3Y4WE5;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0820;
 					};
 					8FD8736C1C76081E00181FA6 = {
 						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0820;
 					};
 					8FD873761C76081E00181FA6 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -332,10 +356,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F9D81951E2790F900BB8BAF /* Span.storyboard in Resources */,
 				8FCE6B121C7E09130079A587 /* LaunchScreen.storyboard in Resources */,
 				8FCE6B0F1C7E09130079A587 /* Assets.xcassets in Resources */,
 				8FCE6B0D1C7E09130079A587 /* Main.storyboard in Resources */,
 				8FF0FB4D1DE45CE5009CA2A5 /* Shape.storyboard in Resources */,
+				8F9D81A11E27ACF500BB8BAF /* Walk.storyboard in Resources */,
 				8F2316071DE44DA6004DAE9B /* Drawn.storyboard in Resources */,
 				8FF0FB4F1DE48281009CA2A5 /* Arcs.storyboard in Resources */,
 			);
@@ -366,6 +392,7 @@
 				8FCE6B0A1C7E09130079A587 /* ViewController.swift in Sources */,
 				8F2316091DE44DCE004DAE9B /* DrawnViewController.swift in Sources */,
 				8FCE6B081C7E09130079A587 /* AppDelegate.swift in Sources */,
+				8F9D81971E27911400BB8BAF /* SpanViewController.swift in Sources */,
 				8FF0FB531DE48BCF009CA2A5 /* ArcsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,9 +401,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FD873881C76083900181FA6 /* ArcLayer.swift in Sources */,
-				8FF0FB511DE483DB009CA2A5 /* ArcsView.swift in Sources */,
-				8FD8738A1C76086100181FA6 /* ArcView.swift in Sources */,
+				8FD873881C76083900181FA6 /* DrawnArcLayer.swift in Sources */,
+				8F9D819B1E2793E200BB8BAF /* Constants.swift in Sources */,
+				8F9D81991E27914300BB8BAF /* SolidArcView.swift in Sources */,
+				8F9D819F1E27AADB00BB8BAF /* ShapeArcView.swift in Sources */,
+				8F9D81A31E27B10E00BB8BAF /* ShapeArcLayer.swift in Sources */,
+				8F9D81911E278CB200BB8BAF /* SolidArcLayer.swift in Sources */,
+				8F9D819D1E27AAB600BB8BAF /* DrawnArcView.swift in Sources */,
+				8F9D818D1E27746F00BB8BAF /* ArcCap.swift in Sources */,
 				8FCE6B2B1C7F358B0079A587 /* Arc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

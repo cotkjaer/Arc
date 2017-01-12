@@ -8,19 +8,20 @@
 
 import UIKit
 import Arc
+import Arithmetic
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var arcView: ArcView!
+    @IBOutlet weak var arcView: SolidArcView?
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
     
-        arcView.width = 20
-        arcView.color = view.tintColor
-        arcView.startDegrees = 90
-        arcView.endDegrees = 200
+        arcView?.arcWidth = 20
+        arcView?.arcColor = view.tintColor
+        arcView?.arcAngle = 0
+        arcView?.arcSpan = .pi
     }
     
     var end = true
@@ -29,11 +30,12 @@ class ViewController: UIViewController {
     {
         if end
         {
-        arcView.endDegrees = arcView.endDegrees + 30
+        arcView?.arcSpan += .pi/4
         }
         else
         {
-        arcView.startDegrees = arcView.startDegrees + 30
+        arcView?.arcAngle += .pi/4
+            arcView?.arcSpan -= .pi/4
         }
         end = !end
     }

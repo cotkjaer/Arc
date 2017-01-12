@@ -27,7 +27,7 @@ let π2 = CGFloat.pi * 2
 
 class DrawnViewController: UIViewController
 {
-    @IBOutlet weak var arcView: DrawnArcView?
+    @IBOutlet weak var arcView: ShapeArcView?
     
     @IBAction func handleButton()
     {

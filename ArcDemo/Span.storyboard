@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cYb-t2-8Tu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Solid-->
+        <scene sceneID="Grq-L8-fVT">
+            <objects>
+                <viewController id="cYb-t2-8Tu" customClass="SpanViewController" customModule="ArcDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JW7-SJ-yS6"/>
+                        <viewControllerLayoutGuide type="bottom" id="1ZY-8G-wvE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EIw-dN-VOd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="8ub-sH-bcB" customClass="SolidArcView" customModule="Arc">
+                                <rect key="frame" x="16" y="162" width="343" height="343"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8ub-sH-bcB" secondAttribute="height" multiplier="1:1" id="82z-XH-goY"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="arcWidth">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="arcColor">
+                                        <color key="value" red="0.0" green="0.68627450980000004" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="arcSpan">
+                                        <real key="value" value="1.2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="arcAngle">
+                                        <real key="value" value="-0.40000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abj-sg-RBZ">
+                                <rect key="frame" x="161" y="318" width="53" height="30"/>
+                                <state key="normal" title="Change"/>
+                                <connections>
+                                    <action selector="handleButton" destination="cYb-t2-8Tu" eventType="touchUpInside" id="kgS-es-726"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8ub-sH-bcB" firstAttribute="top" secondItem="JW7-SJ-yS6" secondAttribute="bottom" priority="900" constant="8" symbolic="YES" id="7H1-8Q-nlC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8ub-sH-bcB" secondAttribute="trailing" priority="900" id="LZ0-Fn-dT1"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="8ub-sH-bcB" secondAttribute="trailing" id="Vq3-mJ-gFO"/>
+                            <constraint firstItem="abj-sg-RBZ" firstAttribute="centerX" secondItem="EIw-dN-VOd" secondAttribute="centerX" id="XBa-Sp-JVr"/>
+                            <constraint firstItem="8ub-sH-bcB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JW7-SJ-yS6" secondAttribute="bottom" constant="8" symbolic="YES" id="jWc-Hg-Ywj"/>
+                            <constraint firstItem="abj-sg-RBZ" firstAttribute="centerY" secondItem="EIw-dN-VOd" secondAttribute="centerY" id="p5a-MN-Wl0"/>
+                            <constraint firstItem="8ub-sH-bcB" firstAttribute="centerY" secondItem="EIw-dN-VOd" secondAttribute="centerY" id="w5a-Je-8E4"/>
+                            <constraint firstItem="8ub-sH-bcB" firstAttribute="centerX" secondItem="EIw-dN-VOd" secondAttribute="centerX" id="yEM-U6-KpI"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Solid" id="I8j-Mc-91e"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="arcView" destination="8ub-sH-bcB" id="Rek-0y-LrF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ury-J5-Kfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-116" y="152"/>
+        </scene>
+    </scenes>
+</document>

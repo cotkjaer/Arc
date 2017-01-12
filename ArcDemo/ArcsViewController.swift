@@ -12,7 +12,7 @@ import Arithmetic
 
 class ArcsViewController: UIViewController
 {
-    var arcViews : [DrawnArcView] { return view.subviews.flatMap({ $0 as? DrawnArcView }) }
+    var arcViews : [SolidArcView] { return view.subviews.flatMap({ $0 as? SolidArcView }) }
     
     @IBOutlet weak var stepper: UIStepper!
     
@@ -23,11 +23,11 @@ class ArcsViewController: UIViewController
         
         while arcViews.count < count
         {
-            let arc = DrawnArcView(frame: bounds)
+            let arc = SolidArcView(frame: bounds)
             arc.backgroundColor = .clear
             arc.tag = Int(arc4random_uniform(5) + 1)
-            arc.startAngle = 0
-            arc.endAngle = 0     
+            arc.arcAngle = 0
+            arc.arcSpan = 0
             view.insertSubview(arc, belowSubview: stepper)
         }
         
@@ -50,14 +50,13 @@ class ArcsViewController: UIViewController
                 arc.frame = bounds
                 
                 let v = CGFloat(arc.tag) / total
-                let angle = v * π2
+                let span = v * π2
                     
-                    arc.clockwise = true
-                    arc.fillColor = UIColor(hue:CGFloat(arcs.count - i) / arcs.count, saturation:0.75, brightness:0.75, alpha:1)
-                    arc.startAngle = startAngle
-                    arc.endAngle = startAngle + angle
-                    arc.width = min(bounds.width, bounds.height) / 7
-                    startAngle += angle
+                    arc.arcColor = UIColor(hue:CGFloat(arcs.count - i) / arcs.count, saturation:0.75, brightness:0.75, alpha:1)
+                    arc.arcAngle = startAngle
+                    arc.arcSpan = span
+                    arc.arcWidth = min(bounds.width, bounds.height) / 7
+                    startAngle += span
                 }
         })
 
