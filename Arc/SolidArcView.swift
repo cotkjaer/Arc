@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Graphics
 
 /**
  View containing an animatable solid arc (one color, no border)
@@ -72,5 +73,36 @@ open class SolidArcView: UIView
     override open class var layerClass : AnyClass
     {
         return SolidArcLayer.self
+    }
+    
+    public var arcPath: UIBezierPath?
+    {
+        return arcLayer?.arcPath
+    }
+    
+    // MARK: - Hit testing
+    
+    open func gestureTouchesArcTrack(gesture: UIGestureRecognizer) -> Bool
+    {
+        return distanceToArcTrack(point: gesture.location(in: self)) < arcWidth / 2
+    }
+
+    open func gestureTouchesArc(gesture: UIGestureRecognizer) -> Bool
+    {
+        return distanceToArcTrack(point: gesture.location(in: self)) < arcWidth / 2
+    }
+
+    
+    private func distanceToArcTrack(point: CGPoint) -> CGFloat
+    {
+        let radius = min(bounds.width, bounds.height) / 2
+        
+        let realArcWidth = min(radius, max(1, abs(arcWidth)))
+        
+        let arcRadius = max(0, radius - realArcWidth / 2)
+        
+        let distance = abs(arcRadius - Graphics.distance(bounds.center, point))
+        
+        return distance
     }
 }

@@ -52,6 +52,9 @@ class SpanViewController: UIViewController {
         },
             completion: { (completed) in
                 
+                let strokePath = arcView.arcPath
+                
+                print(strokePath?.debugDescription ?? "")
                 //                if completed
                 //                {
                 //                    print("arcview start: \(arcView.startAngle), end: \(arcView.endAngle)")

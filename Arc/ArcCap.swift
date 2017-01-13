@@ -24,6 +24,29 @@ public enum ArcCap
         else { self = .butt }
     }
     
+    init(lineCapStyle: CGLineCap?)
+    {
+        if lineCapStyle == .butt { self = .butt }
+        else if lineCapStyle == .round { self = .round }
+        else if lineCapStyle == .square { self = .square }
+        else { self = .butt }
+    }
+    
+    public var lineCapStyle: CGLineCap
+    {
+        switch self
+        {
+        case .butt:
+            return .butt
+            
+        case .round:
+            return .round
+            
+        case .square:
+            return .square
+        }
+    }
+    
     internal var lineEndCap: String
     {
         switch self

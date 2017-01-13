@@ -19,6 +19,14 @@ open class SolidArcLayer: CAShapeLayer
         set { lineCap = newValue.lineEndCap }
     }
     
+    /**
+     The angle where the arc begins
+     */
+    open var arcAnchorAngle: CGFloat = -.pi/2
+        {
+        didSet { updatePath() }
+    }
+    
     private var _angle: CGFloat = 0
     
     /**
@@ -131,7 +139,7 @@ open class SolidArcLayer: CAShapeLayer
     
     // MARK: - Path
     
-    private func createPath(atCenter center: CGPoint? = nil, forSize size: CGSize? = nil, arcWidth: CGFloat? = nil) -> CGPath?
+    private func createPath(atCenter center: CGPoint? = nil, forSize size: CGSize? = nil, arcWidth: CGFloat? = nil) -> UIBezierPath?
     {
         let arcWidth = abs(arcWidth ?? self.arcWidth)
         let size = size ?? bounds.size
@@ -141,17 +149,44 @@ open class SolidArcLayer: CAShapeLayer
         
         guard radius > 0 else { return nil }
         
-        let threeLoops = UIBezierPath(arcCenter: center, radius: radius, startAngle: 0, endAngle: π6, clockwise: true)
+        let threeLoops = UIBezierPath(arcCenter: center, radius: radius, startAngle: arcAnchorAngle, endAngle: π6 + arcAnchorAngle, clockwise: true)
         
-        return threeLoops.cgPath
+        return threeLoops
     }
+    
+    /**
+     The path of the Arc (in the ArcLayers geometry)
+ */
+    public var arcPath: UIBezierPath?
+    {
+        let size = bounds.size
+        
+        let radius = floor((min(size.width, size.height) - arcWidth) / 2)
+        
+        guard radius > 0 else { return nil }
+        
+        let startAngle = arcAnchorAngle + arcAngle
+        let endAngle = startAngle + arcSpan
+        
+        let arcPath = UIBezierPath(arcCenter: bounds.center,
+                                   radius: radius,
+                                   startAngle: startAngle,
+                                   endAngle: endAngle,
+                                   clockwise: true)
+        
+        arcPath.lineWidth = arcWidth
+        arcPath.lineCapStyle = arcCap.lineCapStyle
+        
+        return arcPath
+    }
+    
 
     // MARK: Update
 
     private func updatePath(_ needed: Bool = true)
     {
         guard needed else { return }
-        path = createPath()
+        path = createPath()?.cgPath
     }
     
     // MARK: - Actions
@@ -191,4 +226,23 @@ open class SolidArcLayer: CAShapeLayer
         
         return animation
     }
+    
 }
+
+// MARK: - <#comment#>
+
+extension UIBezierPath
+{
+    // MARK: - Hittesting
+    
+    var strokePath: UIBezierPath?
+    {
+        if let strokePath = CGPath(__byStroking: self.cgPath, transform: nil, lineWidth: lineWidth, lineCap: lineCapStyle, lineJoin: lineJoinStyle, miterLimit: miterLimit)
+        {
+            return UIBezierPath(cgPath: strokePath)
+        }
+        
+         return nil
+    }
+}
+
