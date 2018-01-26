@@ -16,12 +16,11 @@ import Graphics
 open class SolidArcView: UIView
 {
     private var arcLayer : SolidArcLayer? { return layer as? SolidArcLayer }
-   
+    
     /**
      Arcs ends are capped in the style given. 
      - note: not animatable
- */
-    @IBInspectable
+     */
     open var arcCap: ArcCap
         {
         set { arcLayer?.arcCap = newValue }
@@ -31,7 +30,7 @@ open class SolidArcView: UIView
     /**
      Arcs starting angle in radians 
      - note: any value is allowed, but do not change it by more than 2π at a time
- */
+     */
     @IBInspectable
     open var arcAngle: CGFloat
         {
@@ -52,7 +51,7 @@ open class SolidArcView: UIView
     
     /**
      The width of the arc in points
- */
+     */
     @IBInspectable
     open var arcWidth: CGFloat
         {
@@ -86,12 +85,12 @@ open class SolidArcView: UIView
     {
         return distanceToArcTrack(point: gesture.location(in: self)) < arcWidth / 2
     }
-
+    
     open func gestureTouchesArc(gesture: UIGestureRecognizer) -> Bool
     {
         return distanceToArcTrack(point: gesture.location(in: self)) < arcWidth / 2
     }
-
+    
     
     private func distanceToArcTrack(point: CGPoint) -> CGFloat
     {

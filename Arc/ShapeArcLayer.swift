@@ -101,7 +101,7 @@ open class ShapeArcLayer: CAShapeLayer
     
     override open func action(forKey key: String) -> CAAction?
     {
-        guard isCustomKey(key) else { return super.action(forKey: key) }
+        guard ShapeArcLayer.isCustomKey(key) else { return super.action(forKey: key) }
         
         // Get a fully configured animation if we are animating in a UIView.animate
         guard let animation = super.action(forKey: "backgroundColor") as? CABasicAnimation else { setNeedsDisplay(); return nil }

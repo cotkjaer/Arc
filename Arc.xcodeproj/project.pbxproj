@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F02BE151C84730A00BA2646 /* Graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F02BE141C84730A00BA2646 /* Graphics.framework */; };
-		8F02BE161C84730A00BA2646 /* Graphics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F02BE141C84730A00BA2646 /* Graphics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8F02BE171C84732200BA2646 /* Graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F02BE141C84730A00BA2646 /* Graphics.framework */; };
 		8F2316071DE44DA6004DAE9B /* Drawn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2316061DE44DA6004DAE9B /* Drawn.storyboard */; };
 		8F2316091DE44DCE004DAE9B /* DrawnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2316081DE44DCE004DAE9B /* DrawnViewController.swift */; };
 		8F9D818D1E27746F00BB8BAF /* ArcCap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D818C1E27746F00BB8BAF /* ArcCap.swift */; };
@@ -23,27 +20,38 @@
 		8F9D81A11E27ACF500BB8BAF /* Walk.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F9D81A01E27ACF500BB8BAF /* Walk.storyboard */; };
 		8F9D81A31E27B10E00BB8BAF /* ShapeArcLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D81A21E27B10E00BB8BAF /* ShapeArcLayer.swift */; };
 		8FCE6AF61C7DFD600079A587 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 8FCE6AF51C7DFD600079A587 /* Cartfile */; };
-		8FCE6AF91C7DFEBD0079A587 /* Arithmetic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE6AF81C7DFEBD0079A587 /* Arithmetic.framework */; };
 		8FCE6B081C7E09130079A587 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE6B071C7E09130079A587 /* AppDelegate.swift */; };
 		8FCE6B0A1C7E09130079A587 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE6B091C7E09130079A587 /* ViewController.swift */; };
 		8FCE6B0D1C7E09130079A587 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FCE6B0B1C7E09130079A587 /* Main.storyboard */; };
 		8FCE6B0F1C7E09130079A587 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FCE6B0E1C7E09130079A587 /* Assets.xcassets */; };
 		8FCE6B121C7E09130079A587 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FCE6B101C7E09130079A587 /* LaunchScreen.storyboard */; };
-		8FCE6B191C7E0B510079A587 /* Arithmetic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE6AF81C7DFEBD0079A587 /* Arithmetic.framework */; };
-		8FCE6B1A1C7E0B510079A587 /* Arithmetic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE6AF81C7DFEBD0079A587 /* Arithmetic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8FCE6B1E1C7E0BAD0079A587 /* Animation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE6B1C1C7E0BAD0079A587 /* Animation.framework */; };
-		8FCE6B1F1C7E0BAD0079A587 /* Easing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE6B1D1C7E0BAD0079A587 /* Easing.framework */; };
-		8FCE6B201C7E0BC00079A587 /* Animation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE6B1C1C7E0BAD0079A587 /* Animation.framework */; };
-		8FCE6B211C7E0BC00079A587 /* Animation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE6B1C1C7E0BAD0079A587 /* Animation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8FCE6B221C7E0BC00079A587 /* Easing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE6B1D1C7E0BAD0079A587 /* Easing.framework */; };
-		8FCE6B231C7E0BC00079A587 /* Easing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE6B1D1C7E0BAD0079A587 /* Easing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8FCE6B261C7F2CF10079A587 /* Arc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD8736D1C76081E00181FA6 /* Arc.framework */; };
 		8FCE6B271C7F2CF20079A587 /* Arc.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD8736D1C76081E00181FA6 /* Arc.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8FCE6B2B1C7F358B0079A587 /* Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE6B2A1C7F358B0079A587 /* Arc.swift */; };
 		8FD873711C76081E00181FA6 /* Arc.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FD873701C76081E00181FA6 /* Arc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8FD873781C76081E00181FA6 /* Arc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD8736D1C76081E00181FA6 /* Arc.framework */; };
 		8FD8737D1C76081E00181FA6 /* ArcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD8737C1C76081E00181FA6 /* ArcTests.swift */; };
 		8FD873881C76083900181FA6 /* DrawnArcLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD873871C76083900181FA6 /* DrawnArcLayer.swift */; };
+		8FE57CAA201B7F3D00BCB821 /* Fuzzy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F606BD2201B7EA2008D3D63 /* Fuzzy.framework */; };
+		8FE57CAB201B7F3D00BCB821 /* Interpolation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F606BD1201B7EA2008D3D63 /* Interpolation.framework */; };
+		8FE57CAC201B7F3D00BCB821 /* Rounding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F606BD3201B7EA2008D3D63 /* Rounding.framework */; };
+		8FE57CB0201B7F3E00BCB821 /* Animation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE57CAD201B7F3D00BCB821 /* Animation.framework */; };
+		8FE57CB1201B7F3E00BCB821 /* Arithmetic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE57CAE201B7F3D00BCB821 /* Arithmetic.framework */; };
+		8FE57CB2201B7F3E00BCB821 /* Easing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE57CAF201B7F3E00BCB821 /* Easing.framework */; };
+		8FE57CB3201B7F5A00BCB821 /* Animation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE57CAD201B7F3D00BCB821 /* Animation.framework */; };
+		8FE57CB4201B7F5A00BCB821 /* Animation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE57CAD201B7F3D00BCB821 /* Animation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8FE57CB5201B7F5A00BCB821 /* Arithmetic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE57CAE201B7F3D00BCB821 /* Arithmetic.framework */; };
+		8FE57CB6201B7F5A00BCB821 /* Arithmetic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE57CAE201B7F3D00BCB821 /* Arithmetic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8FE57CB7201B7F5A00BCB821 /* Easing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE57CAF201B7F3E00BCB821 /* Easing.framework */; };
+		8FE57CB8201B7F5A00BCB821 /* Easing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE57CAF201B7F3E00BCB821 /* Easing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8FE57CB9201B7F5A00BCB821 /* Fuzzy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F606BD2201B7EA2008D3D63 /* Fuzzy.framework */; };
+		8FE57CBA201B7F5A00BCB821 /* Fuzzy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F606BD2201B7EA2008D3D63 /* Fuzzy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8FE57CBB201B7F5A00BCB821 /* Interpolation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F606BD1201B7EA2008D3D63 /* Interpolation.framework */; };
+		8FE57CBC201B7F5A00BCB821 /* Interpolation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F606BD1201B7EA2008D3D63 /* Interpolation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8FE57CBD201B7F5A00BCB821 /* Rounding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F606BD3201B7EA2008D3D63 /* Rounding.framework */; };
+		8FE57CBE201B7F5A00BCB821 /* Rounding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F606BD3201B7EA2008D3D63 /* Rounding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8FE57CC0201B806700BCB821 /* Graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE57CBF201B806600BCB821 /* Graphics.framework */; };
+		8FE57CC1201B806F00BCB821 /* Graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE57CBF201B806600BCB821 /* Graphics.framework */; };
+		8FE57CC2201B806F00BCB821 /* Graphics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE57CBF201B806600BCB821 /* Graphics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8FF0FB4D1DE45CE5009CA2A5 /* Shape.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF0FB4C1DE45CE5009CA2A5 /* Shape.storyboard */; };
 		8FF0FB4F1DE48281009CA2A5 /* Arcs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF0FB4E1DE48281009CA2A5 /* Arcs.storyboard */; };
 		8FF0FB531DE48BCF009CA2A5 /* ArcsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0FB521DE48BCF009CA2A5 /* ArcsViewController.swift */; };
@@ -73,11 +81,14 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8FCE6B1A1C7E0B510079A587 /* Arithmetic.framework in Embed Frameworks */,
 				8FCE6B271C7F2CF20079A587 /* Arc.framework in Embed Frameworks */,
-				8FCE6B211C7E0BC00079A587 /* Animation.framework in Embed Frameworks */,
-				8FCE6B231C7E0BC00079A587 /* Easing.framework in Embed Frameworks */,
-				8F02BE161C84730A00BA2646 /* Graphics.framework in Embed Frameworks */,
+				8FE57CBC201B7F5A00BCB821 /* Interpolation.framework in Embed Frameworks */,
+				8FE57CB4201B7F5A00BCB821 /* Animation.framework in Embed Frameworks */,
+				8FE57CBE201B7F5A00BCB821 /* Rounding.framework in Embed Frameworks */,
+				8FE57CBA201B7F5A00BCB821 /* Fuzzy.framework in Embed Frameworks */,
+				8FE57CB6201B7F5A00BCB821 /* Arithmetic.framework in Embed Frameworks */,
+				8FE57CB8201B7F5A00BCB821 /* Easing.framework in Embed Frameworks */,
+				8FE57CC2201B806F00BCB821 /* Graphics.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,9 +96,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8F02BE141C84730A00BA2646 /* Graphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Graphics.framework; path = Carthage/Build/iOS/Graphics.framework; sourceTree = "<group>"; };
 		8F2316061DE44DA6004DAE9B /* Drawn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Drawn.storyboard; sourceTree = "<group>"; };
 		8F2316081DE44DCE004DAE9B /* DrawnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawnViewController.swift; sourceTree = "<group>"; };
+		8F606BD1201B7EA2008D3D63 /* Interpolation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Interpolation.framework; path = Carthage/Build/iOS/Interpolation.framework; sourceTree = "<group>"; };
+		8F606BD2201B7EA2008D3D63 /* Fuzzy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fuzzy.framework; path = Carthage/Build/iOS/Fuzzy.framework; sourceTree = "<group>"; };
+		8F606BD3201B7EA2008D3D63 /* Rounding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rounding.framework; path = Carthage/Build/iOS/Rounding.framework; sourceTree = "<group>"; };
 		8F9D818C1E27746F00BB8BAF /* ArcCap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcCap.swift; sourceTree = "<group>"; };
 		8F9D81901E278CB200BB8BAF /* SolidArcLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SolidArcLayer.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8F9D81941E2790F900BB8BAF /* Span.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Span.storyboard; sourceTree = "<group>"; };
@@ -99,7 +112,6 @@
 		8F9D81A01E27ACF500BB8BAF /* Walk.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Walk.storyboard; sourceTree = "<group>"; };
 		8F9D81A21E27B10E00BB8BAF /* ShapeArcLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeArcLayer.swift; sourceTree = "<group>"; };
 		8FCE6AF51C7DFD600079A587 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
-		8FCE6AF81C7DFEBD0079A587 /* Arithmetic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Arithmetic.framework; path = Carthage/Build/iOS/Arithmetic.framework; sourceTree = "<group>"; };
 		8FCE6B051C7E09130079A587 /* ArcDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArcDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FCE6B071C7E09130079A587 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FCE6B091C7E09130079A587 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,8 +119,6 @@
 		8FCE6B0E1C7E09130079A587 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FCE6B111C7E09130079A587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FCE6B131C7E09130079A587 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8FCE6B1C1C7E0BAD0079A587 /* Animation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Animation.framework; path = Carthage/Build/iOS/Animation.framework; sourceTree = "<group>"; };
-		8FCE6B1D1C7E0BAD0079A587 /* Easing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Easing.framework; path = Carthage/Build/iOS/Easing.framework; sourceTree = "<group>"; };
 		8FCE6B2A1C7F358B0079A587 /* Arc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arc.swift; sourceTree = "<group>"; };
 		8FD8736D1C76081E00181FA6 /* Arc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Arc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD873701C76081E00181FA6 /* Arc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Arc.h; sourceTree = "<group>"; };
@@ -117,6 +127,10 @@
 		8FD8737C1C76081E00181FA6 /* ArcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcTests.swift; sourceTree = "<group>"; };
 		8FD8737E1C76081E00181FA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FD873871C76083900181FA6 /* DrawnArcLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawnArcLayer.swift; sourceTree = "<group>"; };
+		8FE57CAD201B7F3D00BCB821 /* Animation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Animation.framework; path = Carthage/Build/iOS/Animation.framework; sourceTree = "<group>"; };
+		8FE57CAE201B7F3D00BCB821 /* Arithmetic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Arithmetic.framework; path = Carthage/Build/iOS/Arithmetic.framework; sourceTree = "<group>"; };
+		8FE57CAF201B7F3E00BCB821 /* Easing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Easing.framework; path = Carthage/Build/iOS/Easing.framework; sourceTree = "<group>"; };
+		8FE57CBF201B806600BCB821 /* Graphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Graphics.framework; path = Carthage/Build/iOS/Graphics.framework; sourceTree = "<group>"; };
 		8FF0FB4C1DE45CE5009CA2A5 /* Shape.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Shape.storyboard; sourceTree = "<group>"; };
 		8FF0FB4E1DE48281009CA2A5 /* Arcs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Arcs.storyboard; sourceTree = "<group>"; };
 		8FF0FB521DE48BCF009CA2A5 /* ArcsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcsViewController.swift; sourceTree = "<group>"; };
@@ -127,11 +141,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FCE6B191C7E0B510079A587 /* Arithmetic.framework in Frameworks */,
-				8FCE6B261C7F2CF10079A587 /* Arc.framework in Frameworks */,
-				8FCE6B201C7E0BC00079A587 /* Animation.framework in Frameworks */,
-				8FCE6B221C7E0BC00079A587 /* Easing.framework in Frameworks */,
-				8F02BE151C84730A00BA2646 /* Graphics.framework in Frameworks */,
+				8FE57CB7201B7F5A00BCB821 /* Easing.framework in Frameworks */,
+				8FE57CB5201B7F5A00BCB821 /* Arithmetic.framework in Frameworks */,
+				8FE57CBD201B7F5A00BCB821 /* Rounding.framework in Frameworks */,
+				8FE57CBB201B7F5A00BCB821 /* Interpolation.framework in Frameworks */,
+				8FE57CB3201B7F5A00BCB821 /* Animation.framework in Frameworks */,
+				8FE57CC1201B806F00BCB821 /* Graphics.framework in Frameworks */,
+				8FE57CB9201B7F5A00BCB821 /* Fuzzy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,10 +155,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F02BE171C84732200BA2646 /* Graphics.framework in Frameworks */,
-				8FCE6B1E1C7E0BAD0079A587 /* Animation.framework in Frameworks */,
-				8FCE6B1F1C7E0BAD0079A587 /* Easing.framework in Frameworks */,
-				8FCE6AF91C7DFEBD0079A587 /* Arithmetic.framework in Frameworks */,
+				8FE57CC0201B806700BCB821 /* Graphics.framework in Frameworks */,
+				8FE57CB0201B7F3E00BCB821 /* Animation.framework in Frameworks */,
+				8FE57CB1201B7F3E00BCB821 /* Arithmetic.framework in Frameworks */,
+				8FE57CB2201B7F3E00BCB821 /* Easing.framework in Frameworks */,
+				8FE57CAA201B7F3D00BCB821 /* Fuzzy.framework in Frameworks */,
+				8FE57CAB201B7F3D00BCB821 /* Interpolation.framework in Frameworks */,
+				8FE57CAC201B7F3D00BCB821 /* Rounding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +176,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F606BD0201B7EA1008D3D63 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FE57CBF201B806600BCB821 /* Graphics.framework */,
+				8FE57CAD201B7F3D00BCB821 /* Animation.framework */,
+				8FE57CAE201B7F3D00BCB821 /* Arithmetic.framework */,
+				8FE57CAF201B7F3E00BCB821 /* Easing.framework */,
+				8F606BD2201B7EA2008D3D63 /* Fuzzy.framework */,
+				8F606BD1201B7EA2008D3D63 /* Interpolation.framework */,
+				8F606BD3201B7EA2008D3D63 /* Rounding.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8FA50D051CABBB65005D28B6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,15 +223,12 @@
 		8FD873631C76081E00181FA6 = {
 			isa = PBXGroup;
 			children = (
-				8F02BE141C84730A00BA2646 /* Graphics.framework */,
-				8FCE6B1C1C7E0BAD0079A587 /* Animation.framework */,
-				8FCE6B1D1C7E0BAD0079A587 /* Easing.framework */,
-				8FCE6AF81C7DFEBD0079A587 /* Arithmetic.framework */,
 				8FCE6AF51C7DFD600079A587 /* Cartfile */,
 				8FD8736F1C76081E00181FA6 /* Arc */,
 				8FD8737B1C76081E00181FA6 /* ArcTests */,
 				8FCE6B061C7E09130079A587 /* ArcDemo */,
 				8FD8736E1C76081E00181FA6 /* Products */,
+				8F606BD0201B7EA1008D3D63 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -314,17 +344,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Christian Otkjær";
 				TargetAttributes = {
 					8FCE6B041C7E09130079A587 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 9HQR3Y4WE5;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0920;
 					};
 					8FD8736C1C76081E00181FA6 = {
 						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0920;
 					};
 					8FD873761C76081E00181FA6 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -467,10 +497,12 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = ArcDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.silverback-it.ArcDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -485,10 +517,12 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = ArcDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.silverback-it.ArcDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -500,14 +534,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -550,14 +590,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -601,12 +647,14 @@
 				);
 				INFOPLIST_FILE = Arc/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.silverback-it.Arc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -625,11 +673,13 @@
 				);
 				INFOPLIST_FILE = Arc/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.silverback-it.Arc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
