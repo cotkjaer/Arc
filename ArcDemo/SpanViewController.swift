@@ -17,7 +17,6 @@ class SpanViewController: UIViewController {
     {
         super.viewDidAppear(animated)
     
-        print("arcview: \(arcView?.arcSpan)")
     }
     
     @IBAction func handleButton()
@@ -32,7 +31,7 @@ class SpanViewController: UIViewController {
         
         let width = CGFloat.random(lower: arcView.bounds.width / 6, upper: arcView.bounds.width / 4)
         
-        print("a: \(startAngle), b: \(endAngle)")
+        debugPrint("a: \(startAngle), b: \(endAngle)")
         
         //        arcCapIndex = abs(arcCapIndex + 1) % ArcCap.all.count
         
@@ -54,7 +53,9 @@ class SpanViewController: UIViewController {
                 
                 let strokePath = arcView.arcPath
                 
-                print(strokePath?.debugDescription ?? "")
+                
+                
+                debugPrint(strokePath?.debugDescription ?? "")
                 //                if completed
                 //                {
                 //                    print("arcview start: \(arcView.startAngle), end: \(arcView.endAngle)")

@@ -33,7 +33,7 @@ open class SolidArcLayer: CAShapeLayer
      The angle to the start of the arc.
      */
     open var arcAngle: CGFloat
-    {
+        {
         get { return _angle }
         set { normalizeStroke(); updateStroke(newValue) }
     }
@@ -127,9 +127,9 @@ open class SolidArcLayer: CAShapeLayer
     private func updateStroke(_ newAngle: CGFloat)
     {
         let current = currentStrokeSpan
-
+        
         let span = current.end - current.start
-
+        
         let delta = (newAngle - _angle) / π6
         
         strokeStart += delta
@@ -156,7 +156,7 @@ open class SolidArcLayer: CAShapeLayer
     
     /**
      The path of the Arc (in the ArcLayers geometry)
- */
+     */
     public var arcPath: UIBezierPath?
     {
         let size = bounds.size
@@ -179,10 +179,9 @@ open class SolidArcLayer: CAShapeLayer
         
         return arcPath
     }
-    
-
+        
     // MARK: Update
-
+    
     private func updatePath(_ needed: Bool = true)
     {
         guard needed else { return }
@@ -199,8 +198,8 @@ open class SolidArcLayer: CAShapeLayer
              #keyPath(CAShapeLayer.strokeEnd),
              #keyPath(CAShapeLayer.lineWidth),
              #keyPath(CAShapeLayer.strokeColor),
-//             #keyPath(CAShapeLayer.lineCap),
-             #keyPath(CAShapeLayer.path):
+             //             #keyPath(CAShapeLayer.lineCap),
+        #keyPath(CAShapeLayer.path):
             return true
             
         default:
@@ -237,12 +236,9 @@ extension UIBezierPath
     
     var strokePath: UIBezierPath?
     {
-        if let strokePath = CGPath(__byStroking: self.cgPath, transform: nil, lineWidth: lineWidth, lineCap: lineCapStyle, lineJoin: lineJoinStyle, miterLimit: miterLimit)
-        {
-            return UIBezierPath(cgPath: strokePath)
-        }
+        guard let strokePath = CGPath(__byStroking: cgPath, transform: nil, lineWidth: lineWidth, lineCap: lineCapStyle, lineJoin: lineJoinStyle, miterLimit: miterLimit) else { return nil }
         
-         return nil
+        return UIBezierPath(cgPath: strokePath)
     }
 }
 

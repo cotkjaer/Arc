@@ -26,7 +26,6 @@
 		8FCE6B0F1C7E09130079A587 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FCE6B0E1C7E09130079A587 /* Assets.xcassets */; };
 		8FCE6B121C7E09130079A587 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FCE6B101C7E09130079A587 /* LaunchScreen.storyboard */; };
 		8FCE6B271C7F2CF20079A587 /* Arc.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD8736D1C76081E00181FA6 /* Arc.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8FCE6B2B1C7F358B0079A587 /* Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE6B2A1C7F358B0079A587 /* Arc.swift */; };
 		8FD873711C76081E00181FA6 /* Arc.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FD873701C76081E00181FA6 /* Arc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8FD873781C76081E00181FA6 /* Arc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD8736D1C76081E00181FA6 /* Arc.framework */; };
 		8FD8737D1C76081E00181FA6 /* ArcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD8737C1C76081E00181FA6 /* ArcTests.swift */; };
@@ -119,7 +118,6 @@
 		8FCE6B0E1C7E09130079A587 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FCE6B111C7E09130079A587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FCE6B131C7E09130079A587 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8FCE6B2A1C7F358B0079A587 /* Arc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arc.swift; sourceTree = "<group>"; };
 		8FD8736D1C76081E00181FA6 /* Arc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Arc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD873701C76081E00181FA6 /* Arc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Arc.h; sourceTree = "<group>"; };
 		8FD873721C76081E00181FA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -254,7 +252,6 @@
 				8FD873871C76083900181FA6 /* DrawnArcLayer.swift */,
 				8F9D819C1E27AAB600BB8BAF /* DrawnArcView.swift */,
 				8FA50D051CABBB65005D28B6 /* Supporting Files */,
-				8FCE6B2A1C7F358B0079A587 /* Arc.swift */,
 			);
 			path = Arc;
 			sourceTree = "<group>";
@@ -439,7 +436,6 @@
 				8F9D81911E278CB200BB8BAF /* SolidArcLayer.swift in Sources */,
 				8F9D819D1E27AAB600BB8BAF /* DrawnArcView.swift in Sources */,
 				8F9D818D1E27746F00BB8BAF /* ArcCap.swift in Sources */,
-				8FCE6B2B1C7F358B0079A587 /* Arc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
